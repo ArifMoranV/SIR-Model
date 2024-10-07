@@ -1,0 +1,490 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Actividad 2: Modelo SIR},
+  pdfauthor={E. Crescio, J. Montalvo, E. Uresti},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Actividad 2: Modelo SIR}
+\author{E. Crescio, J. Montalvo, E. Uresti}
+\date{Noviembre de 2020}
+
+\begin{document}
+\maketitle
+
+\hypertarget{el-modelo-sir}{%
+\subsection{El modelo SIR}\label{el-modelo-sir}}
+
+Consideremos un modelo para describir la dinámica de un grupo de
+individuos de una población con exposición a una enfermedad que puede
+contagiarse entre los miembros de la población. Esto puede modelarse
+como un sistema dinámico denominado \(SIR\) para una población de \(N\)
+individuos en la que se considera la interacción entre un conjunto de
+\(S\) individuos \emph{suceptibles} de contraer la enfermedad, un
+conjunto \(I\) de individuos \emph{infectados} y uno conjunto \(R\) de
+individuos \emph{recuperados} de la enfermedad.
+
+Este modelo tiene los siguientes supuestos:
+
+\begin{itemize}
+\item
+  la probabilidades de infectarse son iguales para todos los individuos
+  de la población;
+\item
+  la población es homogénea, es decir que los riesgos de infectarse son
+  iguales para toos los suceptibles y que los tiempos para recuperarse
+  son iguales para todos los infectados; y
+\item
+  el tamaño \(N\) de la población es constante.
+\end{itemize}
+
+El modelo maneja los diferentes conjuntos \(S\), \(I\) y \(R\) como si
+fueran compartimentos bien separados y considera que los individuos
+pueden pasr de uno a otro en el caso de que se enfermen (cambio
+\(S\rightarrow I\)) o que una vez enfermos se recuperen (cambio
+\(I\rightarrow\)). Ademas, se asume que un individuo no puede pasar del
+conjunto de suceptibles directamente al conjunto de recuperados.
+
+Con estos supuestos y consideraciones, las ecuaciones diferenciales del
+modelo SIR son: \[
+\begin{aligned}
+\frac{dS}{dt}&= -\beta \frac{I}{N} S\\
+\frac{dI}{dt}&= \beta\frac{I}{N}S-\gamma I\\\
+\frac{dR}{dt}&= \gamma I
+\end{aligned}
+\] donde:
+
+\begin{itemize}
+\item
+  N=S+R+I
+\item
+  la cantidad \(\beta\frac{I}{N}\) representa la razón con que las
+  personas salen del compartimento S (se infectan);
+\item
+  en la primera ecuación \(dS\) representa el cambio debido a las
+  personas que salen del compartimento \(S\) (el signo negativo se debe
+  a que las personas salen)
+\item
+  en la segunda ecuación \(dI\) representa el cambio debido a las
+  personas que salen del compartimento \(I\) (una parte se debe a las
+  personas que del compartimento \(S\) pasan al compartimento \(I\), y
+  otra parte se debe a las personas que salen del compartimento \(I\)
+  porque se recuperan);
+\item
+  la cantidad \(\gamma\) representa la razón con que las personas se
+  recuperan.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# PACKAGES:}
+\FunctionTok{library}\NormalTok{(deSolve)}
+\FunctionTok{library}\NormalTok{(reshape2)}
+\CommentTok{\#library(ggplot2)}
+
+\NormalTok{hh}\OtherTok{=}\ControlFlowTok{function}\NormalTok{(beta,gamma,b,mu,t,v)\{}
+\NormalTok{initial\_state\_values }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\AttributeTok{S =} \DecValTok{999999}\NormalTok{,  }\CommentTok{\# Número de susceptibles inicial}
+                                       \CommentTok{\# }
+                          \AttributeTok{I =} \DecValTok{1}\NormalTok{,       }\CommentTok{\# Se inicia con una persona infectada}
+                          \AttributeTok{R =} \DecValTok{0}\NormalTok{)       }\CommentTok{\# }
+
+
+\CommentTok{\#razones en unidades de días\^{}{-}1}
+\NormalTok{parameters }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(beta,gamma,b,mu,v)   }\CommentTok{\# razón de recuperación}
+
+\CommentTok{\#valores de tiempo para resolver la ecuación, de 0 a 60 días}
+\NormalTok{times }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\AttributeTok{from =} \DecValTok{0}\NormalTok{, }\AttributeTok{to =}\NormalTok{ t, }\AttributeTok{by =} \FloatTok{0.001}\NormalTok{)   }
+
+\NormalTok{sir\_model }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(time, state, parameters) \{  }
+    \FunctionTok{with}\NormalTok{(}\FunctionTok{as.list}\NormalTok{(}\FunctionTok{c}\NormalTok{(state, parameters)), \{}\CommentTok{\# R obtendrá los nombres de variables a}
+                                         \CommentTok{\# partir de inputs de estados y parametros}
+\NormalTok{        N }\OtherTok{\textless{}{-}}\NormalTok{ S}\SpecialCharTok{+}\NormalTok{I}\SpecialCharTok{+}\NormalTok{R }
+\NormalTok{        lambda }\OtherTok{\textless{}{-}}\NormalTok{ beta }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{/}\NormalTok{N}
+\NormalTok{        dS }\OtherTok{\textless{}{-}} \SpecialCharTok{{-}}\NormalTok{lambda }\SpecialCharTok{*}\NormalTok{ S}\SpecialCharTok{+}\NormalTok{b}\SpecialCharTok{*}\NormalTok{N}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{S}\SpecialCharTok{{-}}\NormalTok{v}\SpecialCharTok{*}\NormalTok{S           }
+\NormalTok{        dI }\OtherTok{\textless{}{-}}\NormalTok{ lambda }\SpecialCharTok{*}\NormalTok{ S }\SpecialCharTok{{-}}\NormalTok{ gamma }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{I }
+\NormalTok{        dR }\OtherTok{\textless{}{-}}\NormalTok{ gamma }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{R}\SpecialCharTok{+}\NormalTok{v}\SpecialCharTok{*}\NormalTok{S         }
+        \FunctionTok{return}\NormalTok{(}\FunctionTok{list}\NormalTok{(}\FunctionTok{c}\NormalTok{(dS, dI, dR))) }
+\NormalTok{    \})}
+\NormalTok{\}}
+
+\CommentTok{\# poner la solución del sistema de ecuaciones en forma de un dataframe}
+\NormalTok{output }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{ode}\NormalTok{(}\AttributeTok{y =}\NormalTok{ initial\_state\_values, }
+                            \AttributeTok{times =}\NormalTok{ times, }
+                            \AttributeTok{func =}\NormalTok{ sir\_model,}
+                            \AttributeTok{parms =}\NormalTok{ parameters))}
+\FunctionTok{return}\NormalTok{(output)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{gruxe1ficos-de-la-evoluciuxf3n-del-sistema}{%
+\subsection{Gráficos de la evolución del
+sistema}\label{gruxe1ficos-de-la-evoluciuxf3n-del-sistema}}
+
+\#```\{r \} output\_long \textless- melt(as.data.frame(output), id =
+``time'')
+
+ggplot(data = output\_long,\\
+aes(x = time, y = value, colour = variable, group = variable)) +\\
+geom\_line() +\\
+xlab(``Tiempo (días)'')+\\
+ylab(``Número de individuos'') +\\
+labs(colour = ``Subconjunto'') + theme(legend.position = ``bottom'')
+\#```
+
+Con el modelo SIR se define la constante \[R_0=\frac{\beta}{\gamma}\]
+que representa el número de personas que cada contagiado infecta. Para
+que la enfermedad analizada logre dispararse en forma de una epidemia
+debe cumplirse que \(R_0 > 1\).
+
+También se define \[R_{eff}=R_0\frac{S}{N}\] que corresponde al número
+promedio de personas que cada contagiado infecta. Este segundo valor
+\(R_{eff}\) toma en cuenta de que durante la evolución de la pandemia,
+al aumentar del número de personas inmunes en la población cada persona
+contagiada infectará a un número de personas cada vez menor.
+
+\hypertarget{pregunta-1}{%
+\subsection{Pregunta 1}\label{pregunta-1}}
+
+Haga cambios en el modelo para tomar en cuenta el hecho de que la
+población no es constante:
+
+\begin{itemize}
+\item
+  agregar un término de incremento en \(dS\) para tomar en cuenta los
+  individuos nacidos \(+bN\)
+\item
+  agregar un término de decremento en \(dS\) para tomar en cuenta las
+  personas susceptibles que mueren -\(\mu S\)
+\item
+  agregar un término de decremento en \(dI\) para tomar en cuenta las
+  personas infectadas que mueren -\(\mu I\)
+\item
+  agregar un término de decremento en \(dR\) para tomar en cuenta las
+  personas recuperadas que fallecen \(-\mu R\)
+\end{itemize}
+
+Usar ahora los paámetros \[
+\begin{aligned}
+\beta  &=  0.4 days^{-1} &= (0.4 \times 365) years^{-1}\\
+\gamma &=  0.2 days^{-1} &= (0.2 \times 365) years^{-1}\\
+\mu    &=  \frac{1}{70}years^{-1}\\
+b     &=  \frac{1}{70}years^{-1}\\
+\end{aligned}
+\] y considerar una duración de 1 año.
+
+\[
+\begin{aligned}
+\frac{dS}{dt}&= -\beta \frac{I}{N} S+bN-\mu S-vS\\
+\frac{dI}{dt}&= \beta\frac{I}{N}S-\gamma I-\mu I\\\
+\frac{dR}{dt}&= \gamma I-\mu R+vS
+\end{aligned}
+\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{output}\OtherTok{=}\FunctionTok{hh}\NormalTok{(}\AttributeTok{beta =} \FloatTok{0.4}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{gamma =} \FloatTok{0.2}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{b=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{mu=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{t=}\DecValTok{1}\NormalTok{,}\AttributeTok{v=}\DecValTok{0}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{2}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"S"}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{3}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"I"}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{4}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"R"}\NormalTok{,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{MA1002B_Actividad2_files/figure-latex/unnamed-chunk-2-1.pdf}
+
+\hypertarget{pregunta-2}{%
+\subsection{Pregunta 2}\label{pregunta-2}}
+
+Considerando el modelo SIR básico, haga cambios para tomar en cuenta un
+programa de vacunación. Suponga que una fracción \(v\) de susceptibles
+se vacuna de manera que queda inmune (y entra ahora directamente en el
+conjunto de los recuperados). Calcule la dinámica de la epidemia en este
+caso usando los parámetros \(\beta=0.4\), \(\gamma=0.1\) y considere un
+periodo de 2 años.
+
+Su modelo debe ser capaz de mostrar que si la fracción \(v\) es
+suficiente, no es necesario vacunar a todos los suceptibles para evitar
+la epidemia. A este efecto se le conoce como \emph{inmunidad de rebaño}
+y se refiere a que si un sector grande de la población es inmune,
+entonces los contagios se mantienen a un nivel en el que la enfermedad
+es eliminada.
+
+¿Cómo se puede calcular la fracción mínima \(v\) de personas que se
+deben vacunar para poder evitar una epidemia? La inmunidad de rebaño
+ocurre cuando \(R_{eff}< 1\).
+
+\[
+\begin{aligned}
+\frac{dS}{dt}&= -\beta \frac{I}{N} S-vS\\
+\frac{dI}{dt}&= \beta\frac{I}{N}S-\gamma I\\\
+\frac{dR}{dt}&= \gamma I-\mu R+vS
+\end{aligned}
+\]
+
+\$\$\$\$
+
+\[
+\\
+R_{eff}=R_0\frac{S}{N}
+\\
+R_0=\frac{\beta}{\gamma}=\frac{0.4}{0.1}=4
+\\
+1>R_0\frac{S}{N}
+\\
+\frac{N}{R_0}>S
+\\
+\frac{100,000}{4}=25,000>S
+\\
+v=\frac{25,000}{99,999}\approx\frac{1}{4} \therefore v<\frac{1}{4}
+\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{g}\OtherTok{=}\FloatTok{0.1}
+\NormalTok{b}\OtherTok{=}\FloatTok{0.4}
+\NormalTok{R\_0 }\OtherTok{=}\NormalTok{b}\SpecialCharTok{/}\NormalTok{g}
+
+\NormalTok{output}\OtherTok{=}\FunctionTok{hh}\NormalTok{(}\AttributeTok{beta =}\NormalTok{ b}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{gamma =}\NormalTok{ g}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{b=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{mu=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{t=}\DecValTok{2}\NormalTok{,}\AttributeTok{v=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{4}\NormalTok{)}
+\CommentTok{\#N=output[,2]+output[,3]+output[,4]}
+\CommentTok{\#plot(output[,1],R\_0*output[,2]/N,main="Reff",type="l",col="black",lwd="4")}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{2}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"S"}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{3}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"I"}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{4}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"R"}\NormalTok{,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{MA1002B_Actividad2_files/figure-latex/unnamed-chunk-3-1.pdf}
+
+\hypertarget{pregunta-3}{%
+\subsection{Pregunta 3}\label{pregunta-3}}
+
+Haga cambios en el modelo para tomar en cuenta de que la población no es
+constante:
+
+\begin{itemize}
+\item
+  agregar un término de incremento en \(dS\) para tomar en cuenta los
+  nacidos \(+bN\)
+\item
+  agregar un término de decremento en \(dS\) para tomar en cuenta las
+  personas susceptibles que mueren -\(\mu S\)
+\item
+  agregar un término de decremento en \(dI\) para tomar en cuenta las
+  personas infectadas que mueren -\(\mu I\)
+\item
+  agregar un término de decremento en \(dR\) para tomar en cuenta las
+  personas recuperadas que fallecen \(-\mu R\)
+\end{itemize}
+
+Use los parámetros \[
+\begin{aligned}
+\beta  &=  0.4 days^{-1} &= (0.4 \times 365) years^{-1}\\
+\gamma &=  0.2 days^{-1} &= (0.2 \times 365) years^{-1}\\
+\mu    &=  \frac{1}{70}years^{-1}\\
+b     &=  \frac{1}{70}years^{-1}\\
+\end{aligned}
+\] y considere una duración de 400 años en sus cálculos.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{output}\OtherTok{=}\FunctionTok{hh}\NormalTok{(}\AttributeTok{beta =} \FloatTok{0.4}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{gamma =} \FloatTok{0.2}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{b=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{mu=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{t=}\DecValTok{400}\NormalTok{,}\AttributeTok{v=}\DecValTok{0}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{2}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"S"}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{3}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"I"}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{4}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"R"}\NormalTok{,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{MA1002B_Actividad2_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\hypertarget{pregunta-4}{%
+\subsection{Pregunta 4}\label{pregunta-4}}
+
+Considerando el modelo SIR básico, haga cambios para tomar en cuenta un
+programa de vacunación. Suponga que una fracción \(v\) de susceptibles
+se vacuna de manera que queda inmune (y entra ahora directamente en el
+conjunto de los recuperados), mientras que la fracción \((1-v)\) sigue
+siendo susceptible.
+
+Calcule la dinámica de la epidemia en este caso, estudiando cómo cambia
+la dinámica variando la fracción \(v\). Utilice \(\beta=0.6\),
+\(\gamma=0.1\) y considere un periodo de 2 años.
+
+Su modelo debe ser capaz de mostrar que si la fracción \(v\) es
+suficiente, no es necesario vacunar a todos los suceptibles para evitar
+la epidemia. A este efecto se le conoce como \emph{inmunidad de rebaño}
+y se refiere a que si un sector grande de la población es inmune,
+entonces los contagios se mantienen a un nivel en el que la enfermedad
+es eliminada.
+
+¿Cómo se puede calcular la fracción mínima \(v\) de personas que se
+deben vacunar para poder evitar una epidemia? La inmunidad de rebaño
+ocurre cuando \(R_{eff}< 1\).
+
+\[
+\begin{aligned}
+\frac{dS}{dt}&= -\beta \frac{I}{N} S+bN-\mu S-(1-v)S\\
+\frac{dI}{dt}&= \beta\frac{I}{N}S-\gamma I-\mu I\\\
+\frac{dR}{dt}&= \gamma I-\mu R+vS
+\end{aligned}
+\]
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# PACKAGES:}
+\FunctionTok{library}\NormalTok{(deSolve)}
+\FunctionTok{library}\NormalTok{(reshape2)}
+\CommentTok{\#library(ggplot2)}
+
+\NormalTok{hhh}\OtherTok{=}\ControlFlowTok{function}\NormalTok{(beta,gamma,b,mu,t,v)\{}
+\NormalTok{initial\_state\_values }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\AttributeTok{S =} \DecValTok{999999}\NormalTok{,  }\CommentTok{\# Número de susceptibles inicial}
+                                       \CommentTok{\# }
+                          \AttributeTok{I =} \DecValTok{1}\NormalTok{,       }\CommentTok{\# Se inicia con una persona infectada}
+                          \AttributeTok{R =} \DecValTok{0}\NormalTok{)       }\CommentTok{\# }
+
+
+\CommentTok{\#razones en unidades de días\^{}{-}1}
+\NormalTok{parameters }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(beta,gamma,b,mu,v)   }\CommentTok{\# razón de recuperación}
+
+\CommentTok{\#valores de tiempo para resolver la ecuación, de 0 a 60 días}
+\NormalTok{times }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\AttributeTok{from =} \DecValTok{0}\NormalTok{, }\AttributeTok{to =}\NormalTok{ t, }\AttributeTok{by =} \FloatTok{0.001}\NormalTok{)   }
+
+\NormalTok{sir\_model }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(time, state, parameters) \{  }
+    \FunctionTok{with}\NormalTok{(}\FunctionTok{as.list}\NormalTok{(}\FunctionTok{c}\NormalTok{(state, parameters)), \{}\CommentTok{\# R obtendrá los nombres de variables a}
+                                         \CommentTok{\# partir de inputs de estados y parametros}
+\NormalTok{        N }\OtherTok{\textless{}{-}}\NormalTok{ S}\SpecialCharTok{+}\NormalTok{I}\SpecialCharTok{+}\NormalTok{R }
+\NormalTok{        lambda }\OtherTok{\textless{}{-}}\NormalTok{ beta }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{/}\NormalTok{N}
+\NormalTok{        dS }\OtherTok{\textless{}{-}} \SpecialCharTok{{-}}\NormalTok{lambda }\SpecialCharTok{*}\NormalTok{ S}\SpecialCharTok{+}\NormalTok{b}\SpecialCharTok{*}\NormalTok{N}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{S}\SpecialCharTok{{-}}\NormalTok{(}\DecValTok{1}\SpecialCharTok{{-}}\NormalTok{v)}\SpecialCharTok{*}\NormalTok{S           }
+\NormalTok{        dI }\OtherTok{\textless{}{-}}\NormalTok{ lambda }\SpecialCharTok{*}\NormalTok{ S }\SpecialCharTok{{-}}\NormalTok{ gamma }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{I }
+\NormalTok{        dR }\OtherTok{\textless{}{-}}\NormalTok{ gamma }\SpecialCharTok{*}\NormalTok{ I}\SpecialCharTok{{-}}\NormalTok{mu}\SpecialCharTok{*}\NormalTok{R}\SpecialCharTok{+}\NormalTok{v}\SpecialCharTok{*}\NormalTok{S         }
+        \FunctionTok{return}\NormalTok{(}\FunctionTok{list}\NormalTok{(}\FunctionTok{c}\NormalTok{(dS, dI, dR))) }
+\NormalTok{    \})}
+\NormalTok{\}}
+
+\CommentTok{\# poner la solución del sistema de ecuaciones en forma de un dataframe}
+\NormalTok{output }\OtherTok{\textless{}{-}} \FunctionTok{as.data.frame}\NormalTok{(}\FunctionTok{ode}\NormalTok{(}\AttributeTok{y =}\NormalTok{ initial\_state\_values, }
+                            \AttributeTok{times =}\NormalTok{ times, }
+                            \AttributeTok{func =}\NormalTok{ sir\_model,}
+                            \AttributeTok{parms =}\NormalTok{ parameters))}
+\FunctionTok{return}\NormalTok{(output)}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{output}\OtherTok{=}\FunctionTok{hhh}\NormalTok{(}\AttributeTok{beta =} \FloatTok{0.6}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{gamma =} \FloatTok{0.1}\SpecialCharTok{*}\DecValTok{365}\NormalTok{,}\AttributeTok{b=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{mu=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{70}\NormalTok{,}\AttributeTok{t=}\DecValTok{2}\NormalTok{,}\AttributeTok{v=}\DecValTok{1}\SpecialCharTok{/}\DecValTok{4}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{2}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"S"}\NormalTok{,}\AttributeTok{col=}\StringTok{"red"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{3}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"I"}\NormalTok{,}\AttributeTok{col=}\StringTok{"green"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\FunctionTok{par}\NormalTok{(}\AttributeTok{new=}\ConstantTok{TRUE}\NormalTok{)}
+\FunctionTok{plot}\NormalTok{(output[,}\DecValTok{1}\NormalTok{],output[,}\DecValTok{4}\NormalTok{],}\AttributeTok{type=}\StringTok{"l"}\NormalTok{,}\AttributeTok{main=}\StringTok{"R"}\NormalTok{,}\AttributeTok{col=}\StringTok{"blue"}\NormalTok{,}\AttributeTok{lwd=}\FloatTok{1.5}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\includegraphics{MA1002B_Actividad2_files/figure-latex/unnamed-chunk-6-1.pdf}
+
+\end{document}
